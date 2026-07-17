@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Configuração do nosso Tema Premium (Tailwind v4) */
+@theme {
+  --color-background: #09090B;
+  --color-card: #111111;
+  --color-text: #FAFAFA;
+  --color-muted: #A1A1AA;
+  --color-primary: #2563EB;
+  --color-secondary: #38BDF8;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --background-image-glow-gradient: radial-gradient(circle at 50% -20%, #2563EB 0%, transparent 40%);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+}
+
+/* Utilitário para Glassmorphism Premium */
+@layer utilities {
+  .glass-card {
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 24px -8px rgba(0,0,0,0.5);
+  }
+}
